@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,AAAC,CAChB,KAAK,CAAE,MAAM,CACd",
+    "sources": [
+        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/css_scss_handler.css.scss"
+    ],
+    "names": [],
+    "file": "css_scss_handler.css.css"
+}

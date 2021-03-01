@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,AAAC,CACX,KAAK,CAAE,IAAI,CACZ",
+    "sources": [
+        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/globbed/nested/nested_glob.scss"
+    ],
+    "names": [],
+    "file": "nested_glob.css"
+}

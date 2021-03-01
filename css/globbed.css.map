@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,AAAC,CACP,KAAK,CAAE,KAAK,CACb",
+    "sources": [
+        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/globbed/globbed.scss"
+    ],
+    "names": [],
+    "file": "globbed.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,AAAC,CACb,MAAM,CAAE,cAAc,CACvB",
+    "sources": [
+        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/partials/subfolder/relative_not_a_partial.scss"
+    ],
+    "names": [],
+    "file": "relative_not_a_partial.css"
+}
