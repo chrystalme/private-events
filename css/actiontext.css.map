@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAUA,AAEI,aAFS,CACX,mBAAmB,CACf,sBAAsB,CAF5B,aAAa,CACX,mBAAmB,CAEf,WAAW,AAAC,CACZ,IAAI,CAAE,OAAO,CACb,OAAO,CAAE,OAAO,CAChB,SAAS,CAAE,GAAG,CACf,AAPL,AAWM,aAXO,CACX,mBAAmB,AAQhB,sBAAsB,CAEnB,sBAAsB,CAX9B,aAAa,CACX,mBAAmB,AAQhB,sBAAsB,CAGnB,WAAW,CAZnB,aAAa,CACX,mBAAmB,AAShB,sBAAsB,CACnB,sBAAsB,CAX9B,aAAa,CACX,mBAAmB,AAShB,sBAAsB,CAEnB,WAAW,AAAC,CACZ,UAAU,CAAE,GAAG,CACf,SAAS,CAAE,GAAG,CACf,AAfP,AAoBI,aApBS,CAmBX,sBAAsB,CACpB,WAAW,AAAC,CACV,OAAO,CAAE,YAAY,CACrB,SAAS,CAAE,eAAe,CAC3B",
-    "sources": [
-        "../vendor/bundle/ruby/2.7.0/gems/actiontext-6.1.3/lib/generators/action_text/install/templates/actiontext.scss"
-    ],
-    "names": [],
-    "file": "actiontext.css"
-}

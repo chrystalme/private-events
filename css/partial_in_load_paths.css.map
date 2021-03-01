@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,sBAAsB,AAAC,CACrB,KAAK,CAAE,OACT,CAAC",
-    "sources": [
-        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/in_load_paths/partial_in_load_paths.scss"
-    ],
-    "names": [],
-    "file": "partial_in_load_paths.css"
-}

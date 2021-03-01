@@ -39,6 +39,6 @@
 yarn-debug.log*
 .yarn-integrity
 
-# to be ignored
-GemFile.lock
+# Ignore
 vendor/bundle
+Gemfile.lock

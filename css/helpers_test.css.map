@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,AAAC,CACL,UAAU,CAAE,uBAAuB,CACnC,SAAS,CAAE,sBAAsB,CACjC,UAAU,CAAE,uBAAuB,CACnC,SAAS,CAAE,sBAAsB,CACjC,UAAU,CAAE,uBAAuB,CACnC,SAAS,CAAE,sBAAsB,CACjC,UAAU,CAAE,uBAAuB,CACnC,SAAS,CAAE,sBAAsB,CACjC,SAAS,CAAE,sBAAsB,CACjC,QAAQ,CAAE,qBAAqB,CAC/B,wBAAwB,CAAE,4BAA4B,CACtD,eAAe,CAAE,2BAA2B,CAC5C,cAAc,CAAE,0BAA0B,CAC1C,eAAe,CAAE,4BAA4B,CAC7C,cAAc,CAAE,2BAA2B,CAC3C,cAAc,CAAE,yBAAyB,CAC1C",
-    "sources": [
-        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/test/dummy/app/assets/stylesheets/helpers_test.scss"
-    ],
-    "names": [],
-    "file": "helpers_test.css"
-}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../vendor/bundle/ruby/2.7.0/gems/sassc-rails-2.1.2/lib/rails/generators/scss/assets/templates/stylesheet.scss"
-    ],
-    "names": [],
-    "file": "stylesheet.css"
-}
