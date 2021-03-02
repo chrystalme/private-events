@@ -2,7 +2,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <img src="../images/logo.png" width="112" height="28">
+      <img src="./images/logo.png" width="112" height="28">
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -22,13 +22,27 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
+
         <div class="buttons">
-          
-          <%= link_to 'Sign Up', new_user_path, class: 'button is-primary' %>
-          <%= link_to 'Log In', '/users/sign_in', class: 'button is-light' %>
-        
+        <% if @user %>
+           <h2 class='button is-light'>Welcome  <%= @user.name  %></h2>
+          <%= link_to 'Sign Out', new_user_path, class: 'button is-primary' %>
+        <% else %>
+        <%= link_to 'Sign Up', new_user_path, class: 'button is-primary' %>
+        <%= link_to 'Log In', '/users/sign_in', class: 'button is-light' %>
+        <% end %>
         </div>
       </div>
     </div>
   </div>
 </nav>
+<%# @events.each do |event| %>
+        
+        <%#= event.event_date %>
+           
+              <%#= event.description %>
+           
+        
+    <%#= show_creator(post.user) %>
+  <%# end %>
+  
