@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.all.order(created_at: :desc)
+    # @user = User.all.order(created_at: :desc)
+    current_user = User.find_by_id(session[:current_user_id])
   end
 
   private
