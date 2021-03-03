@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'users#show'
-  # get 'users/new'
+  get 'events/index'
   # get 'users/show'
   get 'users/sign_in'
   get 'sign_in', to: 'users#new'
