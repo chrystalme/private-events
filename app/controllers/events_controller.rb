@@ -16,7 +16,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    @created_events = Event.all#.order('created_at DESC')
+    @created_events = Event.find_by(id: session[:user_id])
+    # @created_events = Event.creator#.order('created_at DESC')
     # @events = Event.new
   end
 
