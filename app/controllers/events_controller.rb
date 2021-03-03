@@ -1,27 +1,28 @@
 class EventsController < ApplicationController
 
-  before_action :authenticate_user!, only: %i[new create]
+  # before_action :authenticate_user!, only: %i[new create]
   def new
-    @events = current_user.events.build
+    @created_event = Event.new#current_user.created_events.build
   end
 
   def create
-    @events = current_user.events.build(event_params)
+    @created_event = Event.new(event_params)#created_events.build(event_params)
 
-    if @events.save
+    if @created_event.save
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
   end
+
   def show
-    @events = Event.all.order('created_at DESC')
-    @events = Event.new
+    @created_events = Event.all#.order('created_at DESC')
+    # @events = Event.new
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:event_date, :description, :current_user_id)
+    params.require(:event).permit(:event_date, :description, :creator_id)
   end
 end
