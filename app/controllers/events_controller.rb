@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  # before_action :authenticate_user!, only: %i[new create]
+  # before_action :logged_in?, except: [:index]
   def index
     @created_events = Event.all
   end

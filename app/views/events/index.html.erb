@@ -1,8 +1,9 @@
 <% @created_events.each do |event| %>
-        <h2 class='subtitle'> Creator:
-       <strong> <%= event.creator.name %></strong>
-         </h2>  
-              <%#= event.description %>
+        <div class='subtitle'> Creator:
+       <strong> <%= event.creator.name %></strong><br>
+            <caption>Desc:  <%= event.description %> </caption><br>
+            <small>Date: <%= event.event_date %></small>
+         </div>  
 
            
         
