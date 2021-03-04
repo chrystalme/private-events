@@ -39,7 +39,7 @@
       <div class="navbar-item">
 
         <div class="buttons">
-        <% if @user %>
+        <% if logged_in? %>
            <h2 class='button is-static is-light'>Welcome  <%= @user.name %></h2>
           <%= link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary' %>
         <% else %>
