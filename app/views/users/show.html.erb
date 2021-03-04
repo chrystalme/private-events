@@ -5,10 +5,7 @@
 <div>
 <% if @user %>
   <%= @user.name %>
-
-  <%#= link_to 'Logout', logout_path, method: :delete %>
   <%= button_to 'Logout', logout_path, method: :delete %>
-
 <% end %>
 
 </div>

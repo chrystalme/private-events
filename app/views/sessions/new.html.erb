@@ -1,13 +1,7 @@
 <div class='container'>
-  <h1 class='title is-center'>Sign Up</h1>
-  <%= form_with model: @user, url: sign_up_path do |f| %>
-  <% if @user.errors.any? %>
-    <div class="notification is-danger">
-      <% @user.errors.full_messages.each do |message| %>
-        <div><%= message %></div>
-      <% end %>
-    </div>
-  <% end %>
+  <h1 class='title is-center'>Sign In</h1>
+  <%= form_with model: @user, url: sign_in_path do |f| %>
+
   <div class="field">
     <p class="control has-icons-left has-icons-right">
     <%= f.text_field :name,  placeholder: 'Enter your name', class: 'input is-info' %>
@@ -22,7 +16,7 @@
   
   <div class="field">
     <p class="control">
-      <%= f.submit 'Sign Up', class: 'button is-success' %> 
+      <%= f.submit 'Sign In', class: 'button is-success' %> 
     </p>
   </div>
   <% end %>
