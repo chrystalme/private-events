@@ -43,8 +43,8 @@
            <h2 class='button is-static is-light'>Welcome  <%= @user.name %></h2>
           <%= link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary' %>
         <% else %>
-        <%= link_to 'Sign Up', sign_up_path, class: 'button is-primary' %>
-        <%= link_to 'Sign In', sign_in_path, class: 'button is-light' %>
+          <%= link_to 'Sign Up', sign_up_path, class: 'button is-primary' %>
+          <%= link_to 'Sign In', sign_in_path, class: 'button is-light' %>
         <% end %>
         </div>
       </div>
