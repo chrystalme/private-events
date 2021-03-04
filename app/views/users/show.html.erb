@@ -1,11 +1,7 @@
-<br>
 
-<h1>Show page</h1>
 
-<div>
+<div class='content'>
 <% if @user %>
   <%= @user.name %>
-  <%= button_to 'Logout', logout_path, method: :delete %>
 <% end %>
-
 </div>
