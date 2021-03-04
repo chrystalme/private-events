@@ -13,6 +13,45 @@
   </head>
 
   <body>
+  <h1>Users#show</h1>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <h3><strong>Private Events </strong></h3>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+
+        <div class="buttons">
+        <% if @user %>
+           <h2 class='button is-static is-light'>Welcome  <%= @user.name %></h2>
+          <%= link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary' %>
+        <% else %>
+        <%= link_to 'Sign Up', new_user_path, class: 'button is-primary' %>
+        <%= link_to 'Log In', '/users/sign_in', class: 'button is-light' %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
     <%= render partial: 'shared/flash' %>
     <%= yield %>
   </body>
