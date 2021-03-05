@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @created_event = Event.find
+    @created_event = Event.find(params[:id])
   end
 
   def create
