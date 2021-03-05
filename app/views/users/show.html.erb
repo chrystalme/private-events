@@ -1,6 +1,6 @@
 
-
-<section class='section container'><div class='content'>
+<section class='section container'>
+<div class='content'>
 <% if logged_in?  %>
   <% if current_user.created_events.any? %>
     <p> You have: <%= current_user.created_events.count %> events </p>
@@ -9,7 +9,10 @@
             <h3 class='subtitle'><%= created_event.title %></h3>
             <p> <%= created_event.description %> <span><%= created_event.date %></span></p>
           <% end %>
-
+  <p>You have  
+  <%= current_user.attended_events.past_events.count %> past events</p>
+  <p> You have
+  <%= current_user.attended_events.upcoming_events.count %> upcoming events</p>
   <% else %>
   <h1>No events </h1>
    <%= link_to 'Create Event', new_event_path, class: 'button is-light' %>
