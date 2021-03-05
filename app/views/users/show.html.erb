@@ -9,7 +9,11 @@
             <h3 class='subtitle'><%= created_event.title %></h3>
             <p> <%= created_event.description %> <span><%= created_event.date %></span></p>
           <% end %>
-
+          <p>You are accepted invitation for following <%= current_user.event_attendances.count %> events: <% current_user.event_attendances.each do |attend|%> </p>
+          <ul>
+          <li><%= attend.title %> <li>
+          </ul>
+          <% end %>
   <% else %>
   <h1>No events </h1>
    <%= link_to 'Create Event', new_event_path, class: 'button is-light' %>
