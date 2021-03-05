@@ -1,0 +1,62 @@
+<div class='container'>
+  <h1 class='title is-center'>Sign Up</h1>
+  <%= form_with model: @created_event, url: event_create_path do |f| %>
+  <% if @created_event.errors.any? %>
+    <div class="notification is-danger">
+      <% @created_event.errors.full_messages.each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+    <%= f.text_field :title,  placeholder: 'Enter event title', class: 'input is-info' %>
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+    <%= f.text_area :description,  placeholder: 'Enter event description', class: 'input is-info' %>
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+    <%= f.date_field :date,  placeholder: 'Enter event date', class: 'input is-info' %>
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </p>
+  </div>
+  <div class="field">
+    <p class="control has-icons-left has-icons-right">
+    <%= f.text_field :location,  placeholder: 'Enter event location', class: 'input is-info' %>
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </p>
+  </div>
+  
+  <div class="field">
+    <p class="control">
+      <%= f.submit 'Create Event', class: 'button is-success' %> 
+    </p>
+  </div>
+  <% end %>
+</div>

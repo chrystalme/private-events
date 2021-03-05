@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :logged_in?, except: [:index]
   def new
-    @created_event = current_user.event.build
+    @created_event = current_user.created_events.build
   end
 
   def index
@@ -13,10 +13,10 @@ class EventsController < ApplicationController
   end
 
   def create
-    @created_event = current_user.event.build(event_params) 
+    @created_event = current_user.created_events.build(event_params) 
 
     if @created_event.save
-      flash[:notice] = "#{@event.title} was successfully created."
+      flash[:notice] = "#{@created_event.title} was successfully created."
       redirect_to root_path
     else
       flash[:alert] = 'You need to create a valid event'
