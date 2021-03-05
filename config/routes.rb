@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # get 'users/show'
   root 'users#show'
 
+ 
+  post 'event_create', to: "events#create"
+ 
   resources :users, only: %i[new create show]
   get 'sign_up', to: "users#new"
   post 'sign_up', to: "users#create"

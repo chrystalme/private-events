@@ -1,14 +1,20 @@
 
 
 <div class='content'>
-<% if logged_in? %>
+<% if logged_in? && @created_events != nil %>
   <%= current_user.name %>
 
-  <% current_user.created_events.each do |event|%>
-  <h3 class='subtitle'><%= event.title %></h3>
-  <p> <%= event.description %> <span><%= event.date %></span></p>
-<% end %>
-<% end %>
+  <% @created_events.each do |event|%>
+    <h3 class='subtitle'><%= event.title %></h3>
+    <p> <%= event.description %> <span><%= event.date %></span></p>
+  <% end %>
 
+<% else %>
+  <h1>No events </h1>
+   <%= link_to 'Create Event', events_new_path, class: 'button is-light' %>
+<% end %>
+</div>
 
+<div>
+ 
 </div>
