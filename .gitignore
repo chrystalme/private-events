@@ -39,6 +39,9 @@
 yarn-debug.log*
 .yarn-integrity
 
+<<<<<<< HEAD
 # Ignore
+=======
+>>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
 vendor/bundle
 Gemfile.lock

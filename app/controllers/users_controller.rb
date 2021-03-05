@@ -9,12 +9,23 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
+<<<<<<< HEAD
       redirect_to root_path, notice: "User Created Successfully."
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+=======
+      flash[:notice] = "#{@user.name} is created successfully"
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  # main controller
+>>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
   def show
     if session[:user_id]
       @user = User.find_by(id: session[:user_id])
@@ -22,7 +33,15 @@ class UsersController < ApplicationController
   end
 
   private
+<<<<<<< HEAD
   def user_params
     params.require(:user).permit(:name, :username)
   end
 end
+=======
+
+  def user_params
+    params.require(:user).permit(:name)
+  end
+end
+>>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5

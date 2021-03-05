@@ -1,0 +1,6 @@
+<section class='section container'><div class='content'>
+<%# if logged_in? %>
+<p><%= @created_event.creator.name%></p>
+<%= @created_event.attendees.count %>
+</div>
+</section>

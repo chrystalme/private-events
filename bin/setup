@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env ruby.exe
+=======
+#!/usr/bin/env ruby
+>>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
 require "fileutils"
 
 # path to your application root.

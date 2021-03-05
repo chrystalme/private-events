@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title>PrivateEvents</title>
+=======
+    <title>Events</title>
+>>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,9 +13,54 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css' %>
+<<<<<<< HEAD
   </head>
 
   <body>
+=======
+    <%= stylesheet_link_tag 'https://use.fontawesome.com/releases/v5.7.0/css/all.css' %>
+  </head>
+
+  <body>
+  <%= render partial: 'shared/flash' %>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to "Private Events", root_path, class: "navbar-item" %>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+
+        <div class="buttons">
+        <% if logged_in? %>
+           <h2 class='button is-static is-light'>Welcome  <%= current_user.name %></h2>
+          <%= link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary' %>
+        <% else %>
+          <%= link_to 'Sign Up', sign_up_path, class: 'button is-primary' %>
+          <%= link_to 'Sign In', sign_in_path, class: 'button is-light' %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+>>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
     <%= yield %>
   </body>
 </html>
