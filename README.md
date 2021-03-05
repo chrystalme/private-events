@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
 # Private 
 
 ## We build an site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties .
@@ -93,4 +67,3 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](https://mit-license.org/) licensed.
 
->>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5

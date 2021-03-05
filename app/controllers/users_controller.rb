@@ -9,14 +9,6 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-<<<<<<< HEAD
-      redirect_to root_path, notice: "User Created Successfully."
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-
-=======
       flash[:notice] = "#{@user.name} is created successfully"
       redirect_to root_path
     else
@@ -25,7 +17,6 @@ class UsersController < ApplicationController
   end
 
   # main controller
->>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
   def show
     if session[:user_id]
       @user = User.find_by(id: session[:user_id])

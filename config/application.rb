@@ -6,11 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-<<<<<<< HEAD
-module PrivateEvents
-=======
 module Events
->>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1

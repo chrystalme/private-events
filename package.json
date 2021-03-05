@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "private-events",
-=======
   "name": "events",
->>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

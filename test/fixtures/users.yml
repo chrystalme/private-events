@@ -2,14 +2,6 @@
 
 one:
   name: MyString
-<<<<<<< HEAD
-  username: MyString
 
 two:
   name: MyString
-  username: MyString
-=======
-
-two:
-  name: MyString
->>>>>>> dd4ec7d55667483125df01c863d8106849ec84e5
