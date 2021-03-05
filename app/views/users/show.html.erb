@@ -3,12 +3,16 @@
 <div class='content'>
 <% if logged_in? %>
   <%= current_user.name %>
-
-  <% current_user.created_events.each do |event|%>
+    <% current_user.created_events.each do |event| %>
   <h3 class='subtitle'><%= event.title %></h3>
   <p> <%= event.description %> <span><%= event.date %></span></p>
+
+<% end %>
+<% else %>
+<% @created_events.each do |event| %>
+  <h3 class='subtitle'><%= event.title %></h3>
+  <p> <%= event.description %> <span><%= event.date %></span></p>
+
 <% end %>
 <% end %>
-
-
 </div>
