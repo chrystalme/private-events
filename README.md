@@ -1,24 +1,69 @@
-# README
+# Private 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## We build an site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties .
 
-Things you may want to cover:
 
-* Ruby version
+![screenshot](./images/screenshot.png)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby
+- Rubocop
+- Visual Studio Code
 
-* Database creation
+### Ruby version
 
-* Database initialization
+  ``` ruby 2.7.2 ```
 
-* How to run the test suite
+### System dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+  ``` rails 6.1.7 ```
+  ``` yarn 1.2.2 ```
+  ``` node 14.15.5 ```
 
-* Deployment instructions
+### Configuration
 
-* ...
+  Set up project using the above specifications
+   #### For HTTPS
+   - use ``` https://github.com/chrystalme/private-events.git``` to clone the repository
+   #### For SSH
+   - use ``` git@github.com:chrystalme/private-events.git ``` to clone the repository
+   - Change to the parent directory of the project using 
+    ``` cd private-events ```
+   - run ```bundle install ``` to install dependencies
+   - run ```rails db:migrate ``` to create schema
+   - use ``` rails webpacker:install ``` to install webpacker
+   - use ``` rails s ``` to run the rails server
+
+## Authors
+
+👤 **Ahmet Bozacı**
+- Github:[@ahmtbozaci](https://github.com/ahmetbozaci)
+- Twitter:[@ahmtbozaci](https://twitter.com/ahmtbozaci)
+- LinkedIn:[@ahmtbozaci](https://www.linkedin.com/in/ahmetbozaci/)
+
+👤 **Malieze Afam Ifeanyi**
+
+- GitHub: [@chrystalme](https://github.com/chrystalme)
+- Twitter: [@afam_ifeanyi](https://twitter.com/afam_ifeanyi)
+- LinkedIn: [Malieze Afam Ifeanyi(chrys)](https://linkedin.com/afam-chrys)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/chrystalme/private-events/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Odin Projects](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations) 
+- [Microverse](https://microverse.com)
+
+## 📝 License
+
+This project is [MIT](https://mit-license.org/) licensed.
+
