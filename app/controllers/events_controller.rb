@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+# Event controller class
 class EventsController < ApplicationController
   before_action :logged_in?, except: [:index]
   def new
@@ -14,7 +16,7 @@ class EventsController < ApplicationController
 
   def create
     @created_event = current_user.created_events.build(event_params)
-    
+
     if @created_event.save
       flash[:notice] = "#{@created_event.title} was successfully created."
       redirect_to root_path

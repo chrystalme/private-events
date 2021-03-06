@@ -1,10 +1,11 @@
-class UsersController < ApplicationController
+# frozen_string_literal: true
 
+class UsersController < ApplicationController
   def new
     @user = User.new
   end
 
-  def create 
+  def create
     @user = User.new(user_params)
 
     if @user.save
@@ -18,9 +19,7 @@ class UsersController < ApplicationController
 
   # main controller
   def show
-    if session[:user_id]
-      @user = User.find_by(id: session[:user_id])
-    end
+    @user = User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   private

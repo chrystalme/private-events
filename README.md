@@ -3,10 +3,10 @@
 ## We build an site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties .
 
 
-![screenshot](./images/screenshot-1.png)
-![screenshot](./images/screenshot-2.png)
-![screenshot](./images/screenshot-3.png)
-![screenshot](./images/screenshot-4.png)
+![screenshot](./images/Screenshot-1.png)
+![screenshot](./images/Screenshot-2.png)
+![screenshot](./images/Screenshot-3.png)
+![screenshot](./images/Screenshot-4.jpeg)
 
 ## Built With
 
@@ -34,6 +34,7 @@
    - Change to the parent directory of the project using 
     ``` cd private-events ```
    - run ```bundle install ``` to install dependencies
+   - run ```yarn add ``` to install dependencies
    - run ```rails db:migrate ``` to create schema
    - use ``` rails webpacker:install ``` to install webpacker
    - use ``` rails s ``` to run the rails server
