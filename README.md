@@ -3,7 +3,10 @@
 ## We build an site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties .
 
 
-![screenshot](./images/screenshot.png)
+![screenshot](./images/screenshot-1.png)
+![screenshot](./images/screenshot-2.png)
+![screenshot](./images/screenshot-3.png)
+![screenshot](./images/screenshot-4.png)
 
 ## Built With
 

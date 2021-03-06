@@ -14,7 +14,6 @@ class EventsController < ApplicationController
 
   def create
     @created_event = current_user.created_events.build(event_params)
-    @created_event.attendees << current_user
     
     if @created_event.save
       flash[:notice] = "#{@created_event.title} was successfully created."
