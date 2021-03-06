@@ -34,6 +34,7 @@
    - Change to the parent directory of the project using 
     ``` cd private-events ```
    - run ```bundle install ``` to install dependencies
+   - run ```yarn add ``` to install dependencies
    - run ```rails db:migrate ``` to create schema
    - use ``` rails webpacker:install ``` to install webpacker
    - use ``` rails s ``` to run the rails server
