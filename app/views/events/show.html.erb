@@ -34,13 +34,14 @@
 
 <article class="panel is-success is-one-third">
   <p class="panel-heading"> Attendees
-    <%= @created_event.attendees %>
   </p>
   <a class="panel-block is-active">
     <span class="panel-icon">
       <i class="fas fa-book" aria-hidden="true"></i>
     </span>
-    bulma
+    <% @created_event.attendees.each do |attendee|%>
+        <%= attendee.name%>
+    <% end %>
   </a>
 </article>
 </section>

@@ -15,7 +15,7 @@ class EventsController < ApplicationController
 
   def create
     @created_event = current_user.created_events.build(event_params)
-    @created_event.attendees << current_user
+    # @created_event.attendees << current_user
     if @created_event.save
       flash[:notice] = "#{@created_event.title} was successfully created."
       redirect_to root_path
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
   def attend
     @created_event = Event.find(params[:id])
     @created_event.attendees << current_user
-    flash[:notices] = "You are attending :#{@created_event.title}"
+    flash[:notice] = "You are attending :#{@created_event.title}"
     redirect_to current_user
   end
 
