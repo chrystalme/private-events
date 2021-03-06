@@ -14,7 +14,7 @@
     <ul>
       <% if @created_events.upcoming_events.present? %>
         <% Event.upcoming_events.each do |event| %>
-        <li> <strong> <%= event.title %></strong> | <%= event.date %></li>
+        <li> <strong> <%= link_to event.title, event_path(event) %></li>
         <% end %>
         </ul>
       <% else %>  

@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # Event controller class
 class EventsController < ApplicationController
   before_action :logged_in?, except: [:index]
@@ -16,7 +15,7 @@ class EventsController < ApplicationController
 
   def create
     @created_event = current_user.created_events.build(event_params)
-
+    @created_event.attendees << current_user
     if @created_event.save
       flash[:notice] = "#{@created_event.title} was successfully created."
       redirect_to root_path
@@ -30,7 +29,7 @@ class EventsController < ApplicationController
     @created_event = Event.find(params[:id])
     @created_event.attendees << current_user
     flash[:notices] = "You are attending :#{@created_event.title}"
-    respond_to current_user
+    redirect_to current_user
   end
 
   private

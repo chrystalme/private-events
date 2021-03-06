@@ -1,6 +1,46 @@
 <section class='section container'><div class='content'>
 <%# if logged_in? %>
-<p><%= @created_event.creator.name%></p>
-<%= @created_event.attendees.count %>
+<p>Event Organiser: <strong><%= @created_event.creator.name.upcase!%></strong></p>
+<p>Number of Attendees: <%= @created_event.attendees.count %></p>
+
 </div>
+</section>
+<section class='section container'>
+<article class="panel is-info is-two-third">
+  <p class="panel-heading">
+    Event
+    <%= @created_event.title %>
+  </p>
+  <% if logged_in? %>
+                <div>
+                  <% if @created_event.creator == current_user %>
+                    <span>Hosting  <i class="fa fa-check"></i></span>
+                  <% elsif @created_event.attendees.include?(current_user) %>
+                    <span>Attending  <i class="fa fa-check"></i></span> 
+                  <% else %>
+                    <%= button_to "Attend", attend_event_path, method: :get %>
+                  <% end %>
+  <% else %>
+
+  <% end %>
+                </div>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    <p> <%= @created_event.description %> | <%= @created_event.date %>  | <%= @created_event.location %> </p>
+  </a>
+</article>
+
+<article class="panel is-success is-one-third">
+  <p class="panel-heading"> Attendees
+    <%= @created_event.attendees %>
+  </p>
+  <a class="panel-block is-active">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    bulma
+  </a>
+</article>
 </section>

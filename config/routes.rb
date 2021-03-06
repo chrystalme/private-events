@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   # get 'events/new'
   # get 'events/index'
@@ -9,8 +7,13 @@ Rails.application.routes.draw do
 
   post 'event_create', to: 'events#create'
   # get 'events/:id'
-  resources :events, except: %i[edit delete]
+  resources :events
   resources :users, only: %i[new create show]
+  resources :events, except: %i[destroy update edit] do
+    member do
+      get 'attend'
+    end
+  end
   get 'sign_up', to: 'users#new'
   post 'sign_up', to: 'users#create'
 
