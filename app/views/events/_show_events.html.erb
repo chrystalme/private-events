@@ -10,7 +10,7 @@
     <h4> Upcoming Events </h4>
     <ul>
       <% if @created_events.upcoming_events.present? %>
-        <% Event.upcoming_events.each do |event| %>
+        <% @created_events.upcoming_events.each do |event| %>
         <li> <strong> <%= link_to event.title, event_path(event) %></li>
         <% end %>
         </ul>
@@ -23,7 +23,7 @@
     <h4> Past Events </h4>
     <ul>
       <% if @created_events.past_events.present? %>
-        <% Event.past_events.each do |event| %>
+        <% @created_events.past_events.each do |event| %>
         <li> <strong> <%= event.title %></strong> | <%= event.date %> </li>
         <% end %>
         </ul>
