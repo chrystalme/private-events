@@ -1,51 +1,13 @@
 
 <section class='section container'>
 <div class='content'>
-<% if logged_in?  %>
-  <% if current_user.created_events.any? %>
-    <p> You have: <%= current_user.created_events.count %> events </p>
-      <%= link_to 'Create Event', new_event_path, class: 'button is-light' %>
-          <% current_user.created_events.each do |created_event|%>
-            <h3 class='subtitle'><%= created_event.title %></h3>
-            <p> <%= created_event.description %> <span><%= created_event.date %></span></p>
-          <% end %>  
-  <% else %>
-  <h1>No events </h1>
-   <%= link_to 'Create Event', new_event_path, class: 'button is-light' %>
-  <% end %>
-<% else %>
-  <p> You are not logged in, you can't create event </p>
-  <% Event.all.each do |created_event|%>
-            <h3 class='subtitle'><%= created_event.title %></h3>
-            <p> <%= created_event.description %> <span><%= created_event.date %></span></p>
-          <% end %>
-<% end %>
+  <%= show_user_create(current_user) %>
+  
 </div>
 </section>
 
 <section class='section container'>
 <div class='content'>
-<% if logged_in?  %>
-  <% if Event.past_events.any? %>
-    <p>You have the following <%= Event.past_events.count %> past events</p>
-    <ul>
-        <% Event.past_events.each do |event| %>
-          <li><%= event.title %> | <%= event.date %> | <%= event.location %> </li>
-        <% end %>  
-    </ul>
-  <% else %>
-    <p> You have no past events. </p> 
-  <% end %>
-
-  <% if Event.upcoming_events.any? %>
-    <p>You have the following <%= Event.upcoming_events.count %> upcoming events</p>
-    <ul>
-        <% Event.upcoming_events.each do |event| %>
-          <li><%= event.title %> | <%= event.date %> | <%= event.location %> </li>
-        <% end %>  
-    </ul>
-  <% else %>
-    <p> You have no upcoming events. </p> 
-  <% end %>
-    
-<% end %>
+<%= render 'events' %>
+</div>
+</section>
