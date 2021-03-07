@@ -1,3 +1,4 @@
+# rubocop:disable Style/GuardClause, Style/RedundantInterpolation
 module EventsHelper
   def show_status(current_user)
     if logged_in?
@@ -11,3 +12,4 @@ module EventsHelper
     end
   end
 end
+# rubocop:enable Style/GuardClause, Style/RedundantInterpolation
