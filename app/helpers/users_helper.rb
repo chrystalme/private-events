@@ -1,8 +1,5 @@
 # rubocop:disable Style/GuardClause
 module UsersHelper
-  @upcoming_events = []
-  @past_events = []
-
   def show_user_create(current_user)
     if logged_in?
       if current_user.created_events.any?

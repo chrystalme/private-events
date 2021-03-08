@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  # get 'events/new'
-  # get 'events/index'
-  # get 'users/new'
-  # get 'users/show'
   root 'users#show'
 
   post 'event_create', to: 'events#create'
-  # get 'events/:id'
+
   resources :events
   resources :users, only: %i[new create show]
   resources :events, except: %i[destroy update edit] do
