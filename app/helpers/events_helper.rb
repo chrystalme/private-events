@@ -20,11 +20,11 @@ module EventsHelper
     output.html_safe
   end
 
-  def return_upcoming_events
+  def return_upcoming_events(item)
     output = ''
-    if @created_events.upcoming_events.present? 
-      @created_events.upcoming_events.each do |event|
-      output << "<li> <strong> #{link_to event.title, event_path(event)} </li></ul>"
+    if item.upcoming_events.present? 
+      item.upcoming_events.each do |event|
+      output << "<li> <strong> #{link_to event.title, event_path(event)} </strong></li>"
       end      
     else  
       output << '<p> No upcoming Events </p>'
@@ -32,11 +32,11 @@ module EventsHelper
     output.html_safe
   end
 
-  def return_past_events
+  def return_past_events(item)
     output = ''
-    if @created_events.past_events.present? 
-      @created_events.past_events.each do |event|
-      output << "<li> <strong> #{event.title} </li></ul>"
+    if item.past_events.present? 
+      item.past_events.each do |event|
+      output << "<li> <strong> #{event.title} </strong> </li>"
       end      
     else  
       output << '<p> No past Events </p>'
