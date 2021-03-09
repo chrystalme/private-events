@@ -11,5 +11,37 @@ module EventsHelper
       end
     end
   end
+  def all_events
+    output = ''
+   @created_events.each do |created_event|
+      output << "<h3 class='subtitle'> #{created_event.title} </h3>
+      <p>  #{created_event.description} <span> #{created_event.date}</span></p>"
+    end 
+    output.html_safe
+  end
+
+  def return_upcoming_events
+    output = ''
+    if @created_events.upcoming_events.present? 
+      @created_events.upcoming_events.each do |event|
+      output << "<li> <strong> #{link_to event.title, event_path(event)} </li></ul>"
+      end      
+    else  
+      output << '<p> No upcoming Events </p>'
+    end
+    output.html_safe
+  end
+
+  def return_past_events
+    output = ''
+    if @created_events.past_events.present? 
+      @created_events.past_events.each do |event|
+      output << "<li> <strong> #{event.title} </li></ul>"
+      end      
+    else  
+      output << '<p> No past Events </p>'
+    end
+    output.html_safe
+  end
 end
 # rubocop:enable Style/GuardClause, Style/RedundantInterpolation
