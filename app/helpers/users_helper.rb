@@ -1,15 +1,14 @@
-# rubocop:disable Style/GuardClause
 module UsersHelper
   def show_user_create(current_user)
     output = ''
     if logged_in?
-      if current_user.created_events.any?
-        output << "<p> You have: #{current_user.created_events.count}  events </p>
+      output << if current_user.created_events.any?
+                  "<p> You have: #{current_user.created_events.count}  events </p>
           #{link_to 'Create Event', new_event_path, class: 'button is-light'}"
-      else
-        output << "<h1>No events </h1>
+                else
+                  "<h1>No events </h1>
        #{link_to 'Create Event', new_event_path, class: 'button is-light'} "
-      end
+                end
     end
     output.html_safe
   end
@@ -21,18 +20,19 @@ module UsersHelper
         output << "<h2 class='subtitle'>Past Events </h2><p> There are #{model.past_events.count}  past events</p>"
         model.past_events.each do |event|
           output << "<ul>
-                <li> #{ event.title } | #{ event.date } | #{ event.location }   </li> 
+                <li> #{event.title} | #{event.date} | #{event.location}   </li>
             </ul>"
         end
       else
-        output << '<p> You have no past events. </p>' 
+        output << '<p> You have no past events. </p>'
       end
 
       if model.upcoming_events.any?
-        output << "<h2 class='subtitle'>Upcoming  Events </h2><p>There are #{model.upcoming_events.count} upcoming events</p>"
+        output << "<h2 class='subtitle'>Upcoming  Events </h2>
+        <p>There are #{model.upcoming_events.count} upcoming events</p>"
         model.upcoming_events.each do |event|
           output << "<ul>
-                <li> #{ event.title } | #{ event.date } | #{ event.location }   </li> 
+                <li> #{event.title} | #{event.date} | #{event.location}   </li>
             </ul>"
         end
       else
@@ -47,4 +47,3 @@ module UsersHelper
     output.html_safe
   end
 end
-

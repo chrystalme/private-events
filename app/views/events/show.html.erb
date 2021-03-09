@@ -9,8 +9,10 @@
   <p class="panel-heading">
     Event
     <%= @created_event.title %>
-  </p>  
-      <%= show_status(current_user) %>  
+  </p>
+  <div class="button is-danger">  
+      <%= show_status(current_user) %> 
+    </div> 
   <a class="panel-block">
     <span class="panel-icon">
       <i class="fas fa-book" aria-hidden="true"></i>
