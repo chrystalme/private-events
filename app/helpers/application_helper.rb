@@ -10,6 +10,34 @@ module ApplicationHelper
     output.html_safe
   end
 
+  def header_display
+    output = ''
+    if logged_in?
+      output << "<h2 class='button is-static is-light'>Welcome  #{current_user.name} </h2>
+     #{link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary'}"
+   else 
+     output << "#{link_to 'Sign Up', sign_up_path, class: 'button is-primary'}
+     #{link_to 'Sign In', sign_in_path, class: 'button is-light'}"
+   end
+   output.html_safe 
+  end
+
+  def flash_notice
+    output = ''
+    if flash[:notice] 
+      output << "<div class='notification is-primary'>
+        #{flash[:notice]} 
+      </div>"
+    end   
+    
+    if flash[:alert] 
+     output << "<div class='notification is-danger'>
+         #{flash[:alert]}  
+      </div>"
+    end 
+    output.html_safe
+  end
+
 end
 #   <% if @created_event.errors.any? %>
 #     <div class="notification is-danger">

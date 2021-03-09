@@ -35,13 +35,7 @@
       <div class="navbar-item">
 
         <div class="buttons">
-        <% if logged_in? %>
-           <h2 class='button is-static is-light'>Welcome  <%= current_user.name %></h2>
-          <%= link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary' %>
-        <% else %>
-          <%= link_to 'Sign Up', sign_up_path, class: 'button is-primary' %>
-          <%= link_to 'Sign In', sign_in_path, class: 'button is-light' %>
-        <% end %>
+        <%= header_display %>
         </div>
       </div>
     </div>

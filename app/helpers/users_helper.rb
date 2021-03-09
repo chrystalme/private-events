@@ -1,15 +1,17 @@
 # rubocop:disable Style/GuardClause
 module UsersHelper
   def show_user_create(current_user)
+    output = ''
     if logged_in?
       if current_user.created_events.any?
-        "<p> You have: #{current_user.created_events.count}  events </p>
-          #{link_to 'Create Event', new_event_path, class: 'button is-light'}".html_safe
+        output << "<p> You have: #{current_user.created_events.count}  events </p>
+          #{link_to 'Create Event', new_event_path, class: 'button is-light'}"
       else
-        "<h1>No events </h1>
-       #{link_to 'Create Event', new_event_path, class: 'button is-light'} ".html_safe
+        output << "<h1>No events </h1>
+       #{link_to 'Create Event', new_event_path, class: 'button is-light'} "
       end
     end
+    output.html_safe
   end
 
   def logged(model)
