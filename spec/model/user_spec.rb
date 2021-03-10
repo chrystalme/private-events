@@ -1,14 +1,14 @@
-require "rails_helper"
+# require "rails_helper"
 
-describe User do
-  describe "with 2 or more events" do
-    it "orders them in reverse chronologically" do
-      @user = User.new(name: 'Ahmet')
-      event = @user.created_events.new(title: "first comment", description: "dsad", location: "oljdsa", date: "10-12-2020")
-      expect(@user.id).to eql(event.creator_id)
-    end
-  end
-end
+# describe User do
+#   describe "with 2 or more events" do
+#     it "orders them in reverse chronologically" do
+#       @user = User.new(name: 'Ahmet')
+#       event = @user.created_events.new(title: "first comment", description: "dsad", location: "oljdsa", date: "10-12-2020")
+#       expect(@user.id).to eql(event.creator_id)
+#     end
+#   end
+# end
 
 # RSpec.describe Post, :type => :model do
 #   context "with 2 or more comments" do
