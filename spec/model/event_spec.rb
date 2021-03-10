@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Event, type: 'model' do
   before :each do
-    event = Event.new
-    event.title = 'Test Event'
     user = User.create(name: 'TestName')
   end
 
@@ -13,14 +11,15 @@ RSpec.describe Event, type: 'model' do
     expect(e).to_not be_valid
   end
 
-#   it 'title should not be empty' do
-#     e = Event.new
-#     e.title = 'New Title'
-#     e.date = Time.now
-#     e.location = 'Beirut'
-#     e.description = 'House shower for the newly wedded couple'
-#     expect(e).to be_valid
-#   end
+  it 'should not be empty' do
+    e = Event.new
+    e.title = 'New Title'
+    e.date = Time.now
+    e.location = 'Beirut'
+    e.creator_id = 1
+    e.description = 'House shower for the newly wedded couple'
+    expect(e).to be_valid
+  end
 
   it 'Description should not be empty' do
     e = Event.new
