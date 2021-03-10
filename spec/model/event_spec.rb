@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-  event = Event.new
-  user = User.create(name: 'TestName')
+  before :each do
+    event = Event.new
+    user = User.create(name: 'TestName')
+  end
 
   it 'title should not be empty' do
     event.title = nil
