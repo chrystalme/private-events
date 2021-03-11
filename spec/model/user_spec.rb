@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 describe User do
   describe "with 2 or more events" do
