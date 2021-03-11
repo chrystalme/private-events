@@ -1,5 +1,4 @@
 # rubocop:disable Style/GuardClause:
-This is a long line
 
 module EventsHelper
   def show_status(current_user)
