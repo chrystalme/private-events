@@ -16,9 +16,9 @@ RSpec.describe Event, type: 'model' do
       expect(@event).to respond_to(:event_attendances)
     end
 
-    # it 'has many attendees' do
-    #   expect(user).to respond_to(:attendees)
-    # end
+    it 'has many attendees' do
+      expect(@event).to respond_to(:attendees)
+    end
   end
 
   it 'title should not be empty' do
