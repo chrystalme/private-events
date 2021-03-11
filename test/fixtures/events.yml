@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  description: MyString
-  even_date: 2021-03-02 15:34:22
+  title: MyString
+  description: MyText
+  location: MyString
+  date: 2021-03-04 15:55:45
 
 two:
-  description: MyString
-  even_date: 2021-03-02 15:34:22
+  title: MyString
+  description: MyText
+  location: MyString
+  date: 2021-03-04 15:55:45

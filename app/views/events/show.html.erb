@@ -1,0 +1,33 @@
+<section class='section container'><div class='content'>
+<p>Event Organiser: <strong><%= @created_event.creator.name.upcase!%></strong></p>
+<p>Number of Attendees: <%= @created_event.attendees.count %></p>
+
+</div>
+</section>
+<section class='section container'>
+<article class="panel is-info is-two-third">
+  <p class="panel-heading">
+    Event
+    <%= @created_event.title %>
+  </p><br>   
+      <%= show_status(current_user) %> 
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    <p> <%= @created_event.description %> | <%= @created_event.date %>  | <%= @created_event.location %> </p>
+  </a>
+</article>
+
+<article class="panel is-success is-one-third">
+  <p class="panel-heading"> Attendees
+  </p>
+    <% @created_event.attendees.each do |attendee|%>
+  <a class="panel-block is-active">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span><%= attendee.name %>
+  </a>
+    <% end %>
+</article>
+</section>

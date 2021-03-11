@@ -1,14 +1,19 @@
 <div class='container'>
-  <h1 class='title is-center'>Users#new</h1>
-  <%= form_with url: sign_in_path do |f| %>
+  <h1 class='title is-center'>Sign In</h1>
+  <%= form_with model: @user, url: sign_in_path do |f| %>
+
   <div class="field">
-    <p class="control has-icons-left">
-        <%= f.text_field :username,  placeholder: 'Enter your username', class: 'input is-info' %>
+    <p class="control has-icons-left has-icons-right">
+    <%= f.text_field :name,  placeholder: 'Enter your name', class: 'input is-info' %>
       <span class="icon is-small is-left">
-        <i class="fas fa-lock"></i>
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
       </span>
     </p>
   </div>
+  
   <div class="field">
     <p class="control">
       <%= f.submit 'Sign In', class: 'button is-success' %> 

@@ -1,53 +1,13 @@
-<h1>Users#show</h1>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="./images/logo.png" width="112" height="28">
-    </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-      </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-
-        <div class="buttons">
-        <% if @user %>
-           <h2 class='button is-static is-light'>Welcome  <%= @user.name %></h2>
-          <%= link_to 'Log Out', logout_path, method: 'delete', class: 'button is-primary' %>
-        <% else %>
-        <%= link_to 'Sign Up', new_user_path, class: 'button is-primary' %>
-        <%= link_to 'Log In', '/users/sign_in', class: 'button is-light' %>
-        <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-<% if logged_in? %>
-<% @user.created_events.each do |event| %>
-        <h2 class='subtitle'> Creator:
-       <strong> <%= event.creator.name %></strong>
-         </h2>  
-              <%#= event.description %>
-   <% end %>
-<% else %>
-<% @created_events.each do |event| %>
-       <strong> <%= event.description %></strong>
-       <small><%= event.event_date %></small>
-         </h2>
-         <% end %> 
-<%end %>
+<section class='section container'>
+<div class='content'>
+  <%= show_user_create(current_user) %>
   
+</div>
+</section>
+
+<section class='section container'>
+<div class='content'>
+<%= render 'show' %>
+</div>
+</section>
