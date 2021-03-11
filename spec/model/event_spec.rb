@@ -3,7 +3,22 @@ require 'rails_helper'
 RSpec.describe Event, type: 'model' do
   before :each do
     user = User.create(name: 'TestName')
+    event = Event.new(title: 'New Test', location: 'home' ,description: 'Test event', creator_id: 1, date: '2021-04-10')
   end
+
+  # describe 'associations' do
+  #   it 'belongs to creator' do
+  #     expect(event).to respond_to(:creator)
+  #   end
+
+  #   it 'has many attendances' do
+  #     expect(event).to respond_to(:event_attendances)
+  #   end
+
+  #   it 'has many attendees' do
+  #     expect(user).to respond_to(:attendees)
+  #   end
+  # end
 
   it 'title should not be empty' do
     e = Event.new
