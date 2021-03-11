@@ -41,8 +41,8 @@ group :development, :test do
 
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
-  gem 'webdrivers'
   gem 'shoulda-matchers'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -56,9 +56,9 @@ group :development do
   gem 'spring'
 end
 
-group :test do  
+group :test do
   gem 'selenium-webdriver'
-  
+
   gem 'database_cleaner'
 end
 
