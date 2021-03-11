@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Event, type: 'model' do
   before :each do
-    user = User.create(name: 'TestName')
-    @event = Event.new(title: 'New Test', location: 'home' ,description: 'Test event', creator_id: 1, date: '2021-04-10')
+    @user = User.create(name: 'TestName')
+    @event = @user.created_events.new(title: 'New Test', location: 'home',
+                                      description: 'Test event', creator_id: 1, date: '2021-04-10')
   end
 
   describe 'associations' do
-
     it 'belongs to creator' do
       expect(@event).to respond_to(:creator)
     end

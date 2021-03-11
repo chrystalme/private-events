@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 describe User do
-  describe "with 2 or more events" do
-    it "checks to make sure the user is the creator of an event" do
+  describe 'with 2 or more events' do
+    it 'checks to make sure the user is the creator of an event' do
       @user = User.new(name: 'Ahmet')
-      event = @user.created_events.new(title: "first comment", description: "dsad", location: "oljdsa", date: "10-12-2020")
+      event = @user.created_events.new(title: 'first comment',
+                                       description: 'dsad',
+                                       location: 'oljdsa',
+                                       date: '10-12-2020')
       expect(@user.id).to eql(event.creator_id)
     end
   end
@@ -12,7 +15,11 @@ end
 
 RSpec.describe User, type: :model do
   let(:user) { User.new(name: 'Chrys') }
-  let(:created_events) { Event.new(title: 'New Test', location: 'home' ,description: 'Test event', creator_id: 1, date: '2021-04-10') }
+  let(:created_events) do
+    Event.new(title: 'New Test',
+              location: 'home', description: 'Test event',
+              creator_id: 1, date: '2021-04-10')
+  end
   let(:event_attendances) { EventAttendance.new(attendee_id: 1, attended_event_id: 1) }
 
   describe 'associations' do

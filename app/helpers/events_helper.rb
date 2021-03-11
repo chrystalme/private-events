@@ -1,10 +1,12 @@
+# rubocop:disable Style/GuardClause:
+
 module EventsHelper
   def show_status(current_user)
     if logged_in?
       if @created_event.creator == current_user
         "<div class='button is-danger'> <span>Hosting  <i class='fa fa-check'></i></span></div>".html_safe
       elsif @created_event.attendees.include?(current_user)
-        "<div class='button is-danger'> <span>Attending  <i class='fa fa-check'></i></span></div>".html_safe  
+        "<div class='button is-danger'> <span>Attending  <i class='fa fa-check'></i></span></div>".html_safe
       else
         (button_to 'Attend', attend_event_path, method: :get, class: 'button is-info').to_s.html_safe
       end
@@ -44,3 +46,4 @@ module EventsHelper
     output.html_safe
   end
 end
+# rubocop:enable Style/GuardClause:
