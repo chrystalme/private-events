@@ -9,4 +9,3 @@ RSpec.describe 'event controller', type: :system do
     end
   end
 end
-
