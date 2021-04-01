@@ -1,0 +1,18 @@
+<%= all_events %>
+</div>
+</section>
+
+<section class='section container'>
+  <div class='content'>
+    <h4> Upcoming Events </h4>
+    <ul>
+      <%= return_upcoming_events(@created_events) %>
+    </ul>
+  </div>
+
+  <div class='content'>
+    <h4> Past Events </h4>
+    <ul>
+      <%= return_past_events(@created_events) %>  
+    </ul>
+  </div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css' %>
+    <%= stylesheet_link_tag 'https://use.fontawesome.com/releases/v5.7.0/css/all.css' %>
+  </head>
+
+  <body>
+  <%= render partial: 'shared/flash' %>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to "Private Events", root_path, class: "navbar-item" %>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <%= link_to "Show Events", events_path, class: "navbar-item" %>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+
+        <div class="buttons">
+        <%= header_display %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+    <%= yield %>
+  </body>
+</html>
