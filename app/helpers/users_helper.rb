@@ -13,6 +13,7 @@ module UsersHelper
     output.html_safe
   end
 
+  # rubocop:disable Metrics/PerceivedComplexity
   def logged(model)
     output = ''
     if logged_in?
@@ -46,4 +47,5 @@ module UsersHelper
     end
     output.html_safe
   end
+  # rubocop:enable Metrics/PerceivedComplexity
 end
