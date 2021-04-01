@@ -32,9 +32,9 @@ group :development do
   gem 'web-console', '>= 4.1.0'
 end
 
-group :production do
-  gem 'pg'
-end
+# group :production do
+#   gem 'pg'
+# end
 
 group :test do
   gem 'capybara'
